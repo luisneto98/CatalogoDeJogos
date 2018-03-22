@@ -1,0 +1,20 @@
+{% extends "View/Layout.twig" %}
+{% block title %} Lista de Jogos {% endblock %}
+{% block titlePage %}Lista de Jogos{% endblock %}
+{% block content %}
+    <div class="row ml-5">
+            <div class="card m-3">
+                <img class="card-img-top" style="max-width: 20rem; max-height: 10rem" src="{{ base_url() }}/Games/FlashMath/Image/FlashMathImage.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Flash Math</h5>
+                    <h6 class="card-subtitle text-muted">Lógica e Matemática</h6>
+                    <div style="max-height: 20rem; max-width: 15rem;">
+                        <p class="card-text text-truncate" >Este Jogo vai lhe ajudar a <br>desenvolver suas habilidades<br> em matemática e lógica</p>
+
+                        <p class="card-text"><small class="text-muted">Autor: Tiago</small></p>
+                    </div>
+                    <a class="btn btn-primary float-right" href="{{ path_for('catalogo.home.FlashMath') }}">Entrar</a>
+                </div>
+            </div>
+    </div>
+{% endblock %}

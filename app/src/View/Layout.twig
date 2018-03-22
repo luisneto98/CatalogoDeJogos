@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="site que mostra um catalogo dos jogos da disciplina de algoritimos 1 da universidade UFMA">
+    <meta name="author" content="Luis Alves">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ base_url() }}/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{{ base_url() }}/css/style.css">
+    <script src="{{ base_url() }}/js/bootstrap.min.js"></script>
+    <title>Catálogo de Jogos | {% block title %}{% endblock %}</title>
+    {% block scripthead %}{% endblock %}
+
+
+
+</head>
+<body>
+    <div style="max-height: 100%; min-height: 100%">
+        <header class="d-inline">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-light justify-content-center">
+                <a class="navbar-brand font-weight-bold font-weight-normal text-light text-center" style="font-family: 'Comic Sans MS'" href="{{  path_for('catalogo.home.index') }}">Catálogo de Jogos</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+
+        </header>
+       <main>
+           <h3 class="mb-5 mt-3 ml-5"> {% block titlePage %}{% endblock %}</h3>
+           <section class="container-fluid mb-5" >
+               {% block content%} {% endblock %}
+           </section>
+       </main>
+        <footer class="mt-auto bg-dark text-light border-top footer border-white position-fixed" style="bottom: 0px; width: 100%">
+            <div class=" float-right hidden-xs mr-2 version">
+                <b>Version</b> 0.1.2
+            </div>
+            <strong>Copyright &copy; 2017-2018 <a href="mailto:alvesgamadossantos@gmail.com">Luis Alves</a>, <a href="#">Telemídia</a> e <a href="https://github.com/TannerRogalsky/love.js/">TannerRogalsky</a></strong>.
+            All rights
+            reserved.
+        </footer>
+
+    </div>
+</body>
+
+</html>
